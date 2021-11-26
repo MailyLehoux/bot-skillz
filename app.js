@@ -1,4 +1,5 @@
 const { App } = require("@slack/bolt");
+require("dotenv").config();
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -9,8 +10,7 @@ const app = new App({
 
 app.event('app_home_opened', async ({ event, client, context }) => {
   try {
-    /* view.publish is the method that your app uses to push a view to the Home tab */
-    const result = await client.views.publish({
+   const result = await client.views.publish({
 
       /* the user that opened your app's app home */
       user_id: event.user,
