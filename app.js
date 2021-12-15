@@ -87,7 +87,6 @@ app.command('/helloworld', async ({ ack, payload, context }) => {
           }
         }
       ],
-      // Text in the notification
       text: 'Message from Test App'
     });
     console.log(result);
